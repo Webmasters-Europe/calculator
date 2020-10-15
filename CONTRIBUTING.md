@@ -51,8 +51,7 @@ Please read and understand the contribution guide before creating an issue or pu
 
 ## How can I contribute to projects?
 
--
-**1.** **Issue :** Start with testing the code for any bugs. If found raise an issue about it.
+-   **1.** **Issue :** Start with testing the code for any bugs. If found raise an issue about it.
 
 Before filing an issue:
 

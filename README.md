@@ -1,4 +1,5 @@
 # calculator
+
 This project represents a simple calculator
 
 Welcome to the project _Calculator_, a beginner-friendly challenge for Hacktoberfest!
