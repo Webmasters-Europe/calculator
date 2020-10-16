@@ -7,7 +7,7 @@ const init = () => {
 }
 
 const calculate = () => {
-    DISPLAY.value = eval(DISPLAY.value);
+    DISPLAY.value = eval(DISPLAY.value)
 }
 
 const addButtonEventListeners = () => {
