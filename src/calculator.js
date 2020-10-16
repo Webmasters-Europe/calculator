@@ -6,6 +6,10 @@ const init = () => {
     addButtonEventListeners()
 }
 
+const calculate = () => {
+    DISPLAY.value = eval(DISPLAY.value);
+}
+
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
     $('input[id="2"]').addEventListener('click', () => (DISPLAY.value += '2'))
@@ -26,6 +30,7 @@ const addButtonEventListeners = () => {
     $('input[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
+    $('input[id="="]').addEventListener('click', () => calculate())
 }
 
 init()
