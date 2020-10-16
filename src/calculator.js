@@ -10,6 +10,10 @@ const calculate = () => {
     DISPLAY.value = eval(DISPLAY.value)
 }
 
+function pi() {
+    DISPLAY.value = 3.14159;
+  }
+
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
     $('input[id="2"]').addEventListener('click', () => (DISPLAY.value += '2'))
@@ -31,6 +35,7 @@ const addButtonEventListeners = () => {
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
     $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
+    $('input[id="PI"]').addEventListener('click', () => pi())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 }
