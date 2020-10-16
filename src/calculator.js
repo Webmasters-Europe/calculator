@@ -11,8 +11,8 @@ const calculate = () => {
 }
 
 function pi() {
-    DISPLAY.value += Math.PI.toFixed(2);
-  }
+    DISPLAY.value += Math.PI.toFixed(2)
+}
 
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
