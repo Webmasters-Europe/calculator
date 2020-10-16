@@ -11,7 +11,7 @@ const calculate = () => {
 }
 
 function pi() {
-    DISPLAY.value = 3.14159;
+    DISPLAY.value += Math.PI.toFixed(2);
   }
 
 const addButtonEventListeners = () => {
