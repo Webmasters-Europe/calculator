@@ -30,6 +30,8 @@ const addButtonEventListeners = () => {
     $('input[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
+    $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
+
     $('input[id="="]').addEventListener('click', () => calculate())
 }
 
