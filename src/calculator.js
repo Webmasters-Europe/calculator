@@ -35,7 +35,7 @@ const addButtonEventListeners = () => {
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
     $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('input[id="PI"]').addEventListener('click', () => pi())
+    $('input[id="pi"]').addEventListener('click', () => pi())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 }
