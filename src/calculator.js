@@ -7,7 +7,9 @@ const init = () => {
 }
 
 const calculate = () => {
-    DISPLAY.value = eval(DISPLAY.value)
+    if (DISPLAY.value) {
+        DISPLAY.value = eval(DISPLAY.value)
+    }
 }
 
 function pi() {
