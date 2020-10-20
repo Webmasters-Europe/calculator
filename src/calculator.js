@@ -26,16 +26,15 @@ const addButtonEventListeners = () => {
     $('input[id="9"]').addEventListener('click', () => (DISPLAY.value += '9'))
     $('input[id="0"]').addEventListener('click', () => (DISPLAY.value += '0'))
 
-    $('input[id="Del"]').addEventListener('click', () => (DISPLAY.value = ''))
-    $('input[id="+"]').addEventListener('click', () => (DISPLAY.value += '+'))
-    $('input[id="-"]').addEventListener('click', () => (DISPLAY.value += '-'))
-    $('input[id="*"]').addEventListener('click', () => (DISPLAY.value += '*'))
-    $('input[id="/"]').addEventListener('click', () => (DISPLAY.value += '/'))
+    $('input[id="AC"]').addEventListener('click', () => (DISPLAY.value = ''))
+    $('input[id="+"]').addEventListener('click', () => (DISPLAY.value += ' + '))
+    $('input[id="-"]').addEventListener('click', () => (DISPLAY.value += ' - '))
+    $('input[id="×"]').addEventListener('click', () => (DISPLAY.value += ' * '))
+    $('input[id="÷"]').addEventListener('click', () => (DISPLAY.value += ' / '))
     $('input[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
-    $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('input[id="pi"]').addEventListener('click', () => pi())
+    $('input[id="π"]').addEventListener('click', () => pi())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 }
