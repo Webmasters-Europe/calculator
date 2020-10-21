@@ -1,13 +1,20 @@
 const $ = elem => document.querySelector(elem)
 const $$ = () => document.querySelectorAll(elem)
 const DISPLAY = $('input[type="text"]')
+const KEY_UP = 38
+const KEY_DOWN = 40
+const history = []
+let historyIndex = null
 
 const init = () => {
     addButtonEventListeners()
 }
 
 const calculate = () => {
+    history.push(DISPLAY.value)
     DISPLAY.value = eval(DISPLAY.value)
+    history.push(DISPLAY.value)
+    historyIndex = history.length - 1
 }
 
 function pi() {
@@ -38,6 +45,21 @@ const addButtonEventListeners = () => {
     $('input[id="PI"]').addEventListener('click', () => pi())
 
     $('input[id="="]').addEventListener('click', () => calculate())
+
+    $('body').addEventListener('keydown',checkKeyboard)
+}
+
+const checkKeyboard = event => {
+    if (event.keyCode === KEY_DOWN)
+    {
+        DISPLAY.value = history[historyIndex + 1] ?? ''
+        historyIndex !== (history.length) ? historyIndex++ : null
+    }
+    if (event.keyCode === KEY_UP)
+    {
+        DISPLAY.value = history[historyIndex - 1] ?? ''
+        historyIndex !== -1 ? historyIndex-- : null
+    }
 }
 
 init()
