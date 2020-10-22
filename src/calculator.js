@@ -51,17 +51,15 @@ const addButtonEventListeners = () => {
 
     $('input[id="="]').addEventListener('click', () => calculate())
 
-    $('body').addEventListener('keydown',checkKeyboard)
+    $('body').addEventListener('keydown', checkKeyboard)
 }
 
 const checkKeyboard = event => {
-    if (event.keyCode === KEY_DOWN)
-    {
+    if (event.keyCode === KEY_DOWN) {
         DISPLAY.value = history[historyIndex + 1] ?? ''
-        historyIndex !== (history.length) ? historyIndex++ : null
+        historyIndex !== history.length ? historyIndex++ : null
     }
-    if (event.keyCode === KEY_UP)
-    {
+    if (event.keyCode === KEY_UP) {
         DISPLAY.value = history[historyIndex - 1] ?? ''
         historyIndex !== -1 ? historyIndex-- : null
     }
