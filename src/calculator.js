@@ -16,6 +16,10 @@ function pi() {
     DISPLAY.value += Math.PI.toFixed(2)
 }
 
+function euler() {
+    DISPLAY.value += Math.E.toFixed(2)
+}
+
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
     $('input[id="2"]').addEventListener('click', () => (DISPLAY.value += '2'))
@@ -36,7 +40,9 @@ const addButtonEventListeners = () => {
     $('input[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
-    $('input[id="π"]').addEventListener('click', () => pi())
+    $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
+    $('input[id="pi"]').addEventListener('click', () => pi())
+    $('input[id="e"]').addEventListener('click', () => euler())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 }
