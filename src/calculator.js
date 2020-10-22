@@ -7,7 +7,9 @@ const init = () => {
 }
 
 const calculate = () => {
-    DISPLAY.value = eval(DISPLAY.value)
+    if (DISPLAY.value) {
+        DISPLAY.value = eval(DISPLAY.value)
+    }
 }
 
 function pi() {
@@ -30,17 +32,17 @@ const addButtonEventListeners = () => {
     $('input[id="9"]').addEventListener('click', () => (DISPLAY.value += '9'))
     $('input[id="0"]').addEventListener('click', () => (DISPLAY.value += '0'))
 
-    $('input[id="Del"]').addEventListener('click', () => (DISPLAY.value = ''))
-    $('input[id="+"]').addEventListener('click', () => (DISPLAY.value += '+'))
-    $('input[id="-"]').addEventListener('click', () => (DISPLAY.value += '-'))
-    $('input[id="*"]').addEventListener('click', () => (DISPLAY.value += '*'))
-    $('input[id="/"]').addEventListener('click', () => (DISPLAY.value += '/'))
+    $('input[id="AC"]').addEventListener('click', () => (DISPLAY.value = ''))
+    $('input[id="+"]').addEventListener('click', () => (DISPLAY.value += ' + '))
+    $('input[id="-"]').addEventListener('click', () => (DISPLAY.value += ' - '))
+    $('input[id="×"]').addEventListener('click', () => (DISPLAY.value += ' * '))
+    $('input[id="÷"]').addEventListener('click', () => (DISPLAY.value += ' / '))
     $('input[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
     $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('input[id="PI"]').addEventListener('click', () => pi())
-    $('input[id="euler"]').addEventListener('click', () => euler())
+    $('input[id="pi"]').addEventListener('click', () => pi())
+    $('input[id="e"]').addEventListener('click', () => euler())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 }
