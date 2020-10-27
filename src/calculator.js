@@ -42,7 +42,7 @@ const addButtonEventListeners = () => {
     $('input[id="PI"]').addEventListener('click', () => pi())
     $('input[id="euler"]').addEventListener('click', () => euler())
 
-    $('input[id="="]').addEventListener('click', () => calculate())
+    $('input[id="sqrt"]').addEventListener('click', () => (DISPLAY.value = Math.sqrt(DISPLAY.value).toFixed(2)))
 }
 
 init()
