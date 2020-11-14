@@ -14,6 +14,7 @@ const calculate = () => {
     history.push(DISPLAY.value)
     DISPLAY.value = eval(DISPLAY.value)
     history.push(DISPLAY.value)
+    console.log(history);
     historyIndex = history.length - 1
 }
 
@@ -24,6 +25,14 @@ function pi() {
 function euler() {
     DISPLAY.value += Math.E.toFixed(2)
 }
+
+function sqrt() {
+    DISPLAY.value = Math.sqrt(eval(DISPLAY.value)).toFixed(3);
+}
+
+
+
+
 
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
@@ -48,6 +57,7 @@ const addButtonEventListeners = () => {
     $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
     $('input[id="pi"]').addEventListener('click', () => pi())
     $('input[id="e"]').addEventListener('click', () => euler())
+    $('input[id="sqrt"]').addEventListener('click', () => sqrt())
 
     $('input[id="="]').addEventListener('click', () => calculate())
 
