@@ -32,8 +32,6 @@ function sqrt() {
     historyIndex = history.length - 1
 }
 
-
-
 const addButtonEventListeners = () => {
     $('input[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
     $('input[id="2"]').addEventListener('click', () => (DISPLAY.value += '2'))
@@ -55,8 +53,10 @@ const addButtonEventListeners = () => {
     $('input[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('input[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
     $('input[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('button[id="pow"]').addEventListener('click', () => (DISPLAY.value += '**'))
-
+    $('button[id="pow"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += '**'),
+    )
 
     $('input[id="pi"]').addEventListener('click', () => pi())
     $('input[id="e"]').addEventListener('click', () => euler())
