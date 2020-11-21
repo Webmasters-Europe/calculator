@@ -1,7 +1,6 @@
 const $ = elem => document.querySelector(elem)
 const $$ = () => document.querySelectorAll(elem)
 
-
 const DISPLAY = $('input[type="text"]')
 const KEY_UP = 38
 const KEY_DOWN = 40
@@ -47,10 +46,22 @@ const addButtonEventListeners = () => {
     $('button[id="0"]').addEventListener('click', () => (DISPLAY.value += '0'))
 
     $('button[id="AC"]').addEventListener('click', () => (DISPLAY.value = ''))
-    $('button[id="+"]').addEventListener('click', () => (DISPLAY.value += ' + '))
-    $('button[id="-"]').addEventListener('click', () => (DISPLAY.value += ' - '))
-    $('button[id="×"]').addEventListener('click', () => (DISPLAY.value += ' * '))
-    $('button[id="÷"]').addEventListener('click', () => (DISPLAY.value += ' / '))
+    $('button[id="+"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' + '),
+    )
+    $('button[id="-"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' - '),
+    )
+    $('button[id="×"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' * '),
+    )
+    $('button[id="÷"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' / '),
+    )
     $('button[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('button[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('button[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
