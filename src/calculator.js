@@ -1,7 +1,8 @@
 const $ = elem => document.querySelector(elem)
 const $$ = () => document.querySelectorAll(elem)
+const getElementById = id => document.getElementById(id)
 
-const DISPLAY = $('input[type="text"]')
+const DISPLAY = $('input[id="output"]')
 const KEY_UP = 38
 const KEY_DOWN = 40
 const history = []
@@ -42,35 +43,55 @@ function sqrt() {
 }
 
 const addButtonEventListeners = () => {
-    $('button[id="1"]').addEventListener('click', () => (DISPLAY.value += '1'))
-    $('button[id="2"]').addEventListener('click', () => (DISPLAY.value += '2'))
-    $('button[id="3"]').addEventListener('click', () => (DISPLAY.value += '3'))
-    $('button[id="4"]').addEventListener('click', () => (DISPLAY.value += '4'))
-    $('button[id="5"]').addEventListener('click', () => (DISPLAY.value += '5'))
-    $('button[id="6"]').addEventListener('click', () => (DISPLAY.value += '6'))
-    $('button[id="7"]').addEventListener('click', () => (DISPLAY.value += '7'))
-    $('button[id="8"]').addEventListener('click', () => (DISPLAY.value += '8'))
-    $('button[id="9"]').addEventListener('click', () => (DISPLAY.value += '9'))
-    $('button[id="0"]').addEventListener('click', () => (DISPLAY.value += '0'))
+    getElementById('1').addEventListener('click', () => (DISPLAY.value += '1'))
+    getElementById('2').addEventListener('click', () => (DISPLAY.value += '2'))
+    getElementById('3').addEventListener('click', () => (DISPLAY.value += '3'))
+    getElementById('4').addEventListener('click', () => (DISPLAY.value += '4'))
+    getElementById('5').addEventListener('click', () => (DISPLAY.value += '5'))
+    getElementById('6').addEventListener('click', () => (DISPLAY.value += '6'))
+    getElementById('7').addEventListener('click', () => (DISPLAY.value += '7'))
+    getElementById('8').addEventListener('click', () => (DISPLAY.value += '8'))
+    getElementById('9').addEventListener('click', () => (DISPLAY.value += '9'))
+    getElementById('0').addEventListener('click', () => (DISPLAY.value += '0'))
 
-    $('button[id="AC"]').addEventListener('click', () => (DISPLAY.value = ''))
-    $('button[id="+"]').addEventListener('click', () => (DISPLAY.value += ' + '))
-    $('button[id="-"]').addEventListener('click', () => (DISPLAY.value += ' - '))
-    $('button[id="×"]').addEventListener('click', () => (DISPLAY.value += ' * '))
-    $('button[id="÷"]').addEventListener('click', () => (DISPLAY.value += ' / '))
-    $('button[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
-    $('button[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
-    $('button[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
-    $('button[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('button[id="pow"]').addEventListener('click', () => (DISPLAY.value += '**'))
+    getElementById('AC').addEventListener('click', () => (DISPLAY.value = ''))
+    getElementById('+').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' + '),
+    )
+    getElementById('-').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' - '),
+    )
+    getElementById('×').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' * '),
+    )
+    getElementById('÷').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' / '),
+    )
+    getElementById('(').addEventListener('click', () => (DISPLAY.value += '('))
+    getElementById(')').addEventListener('click', () => (DISPLAY.value += ')'))
+    getElementById('.').addEventListener('click', () => (DISPLAY.value += '.'))
+    getElementById('%').addEventListener('click', () => (DISPLAY.value += '%'))
+    getElementById('pow').addEventListener(
+        'click',
+        () => (DISPLAY.value += '**'),
+    )
 
-    $('button[id="pi"]').addEventListener('click', () => pi())
-    $('button[id="e"]').addEventListener('click', () => euler())
-    $('button[id="sqrt"]').addEventListener('click', () => sqrt())
-    $('button[id="sin"]').addEventListener('click', () => sin())
-    $('button[id="asin"]').addEventListener('click', () => asin())
+    getElementById('pi').addEventListener('click', () => pi())
+    getElementById('e').addEventListener('click', () => euler())
+    getElementById('sqrt').addEventListener('click', () => sqrt())
+    getElementById('sin').addEventListener('click', () => sin())
+    getElementById('asin').addEventListener('click', () => asin())
 
-    $('button[id="="]').addEventListener('click', () => calculate())
+    getElementById('=').addEventListener('click', () => calculate())
+
+    getElementById('output').addEventListener('click', event => {
+        event.target.select()
+        document.execCommand('copy')
+    })
 
     $('body').addEventListener('keydown', checkKeyboard)
 }
