@@ -1,7 +1,6 @@
 const $ = elem => document.querySelector(elem)
 const $$ = () => document.querySelectorAll(elem)
 
-
 const DISPLAY = $('input[type="text"]')
 const KEY_UP = 38
 const KEY_DOWN = 40
@@ -25,6 +24,14 @@ function pi() {
 
 function euler() {
     DISPLAY.value += Math.E.toFixed(2)
+}
+
+function sin() {
+    DISPLAY.value = Math.sin(eval(DISPLAY.value))
+}
+
+function asin() {
+    DISPLAY.value = Math.asin(eval(DISPLAY.value))
 }
 
 function sqrt() {
@@ -55,14 +62,13 @@ const addButtonEventListeners = () => {
     $('button[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('button[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
     $('button[id="%"]').addEventListener('click', () => (DISPLAY.value += '%'))
-    $('button[id="pow"]').addEventListener(
-        'click',
-        () => (DISPLAY.value += '**'),
-    )
+    $('button[id="pow"]').addEventListener('click', () => (DISPLAY.value += '**'))
 
     $('button[id="pi"]').addEventListener('click', () => pi())
     $('button[id="e"]').addEventListener('click', () => euler())
     $('button[id="sqrt"]').addEventListener('click', () => sqrt())
+    $('button[id="sin"]').addEventListener('click', () => sin())
+    $('button[id="asin"]').addEventListener('click', () => asin())
 
     $('button[id="="]').addEventListener('click', () => calculate())
 
