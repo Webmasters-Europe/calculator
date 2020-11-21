@@ -54,10 +54,22 @@ const addButtonEventListeners = () => {
     $('button[id="0"]').addEventListener('click', () => (DISPLAY.value += '0'))
 
     $('button[id="AC"]').addEventListener('click', () => (DISPLAY.value = ''))
-    $('button[id="+"]').addEventListener('click', () => (DISPLAY.value += ' + '))
-    $('button[id="-"]').addEventListener('click', () => (DISPLAY.value += ' - '))
-    $('button[id="×"]').addEventListener('click', () => (DISPLAY.value += ' * '))
-    $('button[id="÷"]').addEventListener('click', () => (DISPLAY.value += ' / '))
+    $('button[id="+"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' + '),
+    )
+    $('button[id="-"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' - '),
+    )
+    $('button[id="×"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' * '),
+    )
+    $('button[id="÷"]').addEventListener(
+        'click',
+        () => (DISPLAY.value += ' / '),
+    )
     $('button[id="("]').addEventListener('click', () => (DISPLAY.value += '('))
     $('button[id=")"]').addEventListener('click', () => (DISPLAY.value += ')'))
     $('button[id="."]').addEventListener('click', () => (DISPLAY.value += '.'))
