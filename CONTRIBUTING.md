@@ -26,7 +26,7 @@ Please read and understand the contribution guide before creating an issue or pu
 5) Push your changes _to your repository_:
 
     ```bash
-    git push origin main
+    git push origin master
     ```
 
 6) Go to the GitHub page of _your fork_, and make a pull request:
